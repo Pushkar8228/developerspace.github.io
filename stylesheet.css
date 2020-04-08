@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: whitesmoke;
+}
+#navButton {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    border: none;
+    outline: none;
+    background: #20232A;
+    padding: 0 20px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px  rgba(0,0,0,0.50);
+    z-index: 3; 
+    
+}
+nav {
+    background: #8C4C4C;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    opacity: 0;
+    display: none;
+
+}
+a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+li {
+    list-style: none;
+    margin: 5px 0;
+    color: #9d94eb;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    
+}
+header,h2,h4 {
+    margin: 0;
+}
+h2 {
+    font-weight: 400;
+    border-bottom: 1px solid #444;
+    color:#5443ec ;
+    font-size: 2rem;
+    margin-right: 10px;
+
+}
+h1{
+    
+    font-size: 4pc;
+    color: #f50808;
+    letter-spacing: 3px;
+    font-style: italic;
+    text-align: center;
+    padding: 50px;
+}
+h3 {
+    color: rgb(216, 194, 124);
+    text-align: left;
+    padding: 5px;
+    font-style: normal;
+}
+h4 {
+    padding-top: 20px;
+    padding-left: 5px;
+    font-size: 1.2rem;
+}
+p {
+    padding-left: 20px;
+    font-size: large;
+    padding-right: 0px;
+}
+main {
+    padding-top: 6vh;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.line {
+    height: 3px;
+    width: 25px;
+    margin: 5px 0;
+    background: #F37253;
+
+}
+.close-btn {
+    color: #F37253;
+    font-size: 1.Srem;
+    width: 25px;
+}
+#roadmap-container {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20PX;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #CBD3DA;
+}
+#roadmap-container a {
+    font-size: 1.8rem;
+    color: #F0EFEF;
+    letter-spacing: 2px;
+}
+
+
+.menu-dropdown-item {
+    border: none;
+    outline: none;
+    background: none;
+    color: #F0EFEF;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-left: 60px;
+
+}
+.material-icons {
+    color: #EBE4E4;
+    position: relative;
+    top: 4px;
+
+}
+
+.menu-link {
+    margin: 20px 35px;
+}
+.showNav {
+    animation: showNav 0.5s forwards;
+    display: block;
+}
+.closeNav {
+    animation: closeNav 0.5s forwards;
+    display: none;
+}
+@keyframes showNav {
+   100%{
+       opacity: 1;
+   }
+   
+}
+@keyframes closeNav {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+
+}
+@media screen and (min-width: 700px) {
+    nav {
+        animation: showNav !important;
+        opacity: 1;
+        
+        width: 350px;
+        display: block !important ;
+    }
+    #navButton {
+        display:none;
+    }
+    main {
+        margin-left: 390px;
+        padding-top: 6vh;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

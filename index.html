@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html Lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title>String ppt</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        <button id="navButton">
+            <div hidden class="close-btn">X</div>
+            <div  class="hamburger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            </div>
+
+        </button>
+        <nav>
+            <div id="roadmap-container">
+                <a href="#roadmap-article" class="menu-item" >String Class & StringBuffer Class</a>
+                   <h3>Submitted By:</h3>
+                    <h3>Puneet(1806143)</h3>
+                    <h3>Pushkar Prabhat (1806144)</h3>
+                    <h3>Raja (1806146)</h3>
+                    <h3>Ritesh (1806148)</h3>
+            </div>
+
+
+                <div class="menu-link">
+                <button data-list="1" class="menu-dropdown-item">String<i 
+                    class="material-icons" id="sublist-1-arrow">arrow_drop_down</i></button>
+                        <ul id="sublist-1" hidden>
+                            <li><a href="#String-defination" class="menu-item">String Overview</a></li>
+                            <li><a href="#html-overview-article" class="menu-item">String Constructor</a></li>
+                            <li><a href="#String-operations" class="menu-item">String Operations</a></li>
+                            <li><a href="#String-Methods" class="menu-item">String Methods</a></li>
+                            <li><a href="#String-Conversion-and-toString()" class="menu-item">String Conversion and toString()</a></li>
+                            <li><a href="#Data-Conversion" class="menu-item">Data Conversion using valueOf()</a></li>
+                           
+                        </ul>
+                </div>
+                <div class="menu-link">
+                <button data-list="2" class="menu-dropdown-item">StringBuffer<i 
+                    class="material-icons" id="sublist-2-arrow">arrow_drop_down</i></button>
+                        <ul id="sublist-2" hidden>
+                            <li><a href="#StringBuffer-Constructor" class="menu-item">StringBuffer Constructor</a></li>
+                            <li><a href="#StringBuffer-Functions" class="menu-item">StringBuffer Methods</a></li>
+                        </ul>
+                </div>
+                <div class="menu-link">
+                <button data-list="3" class="menu-dropdown-item">Some Example<i 
+                    class="material-icons" id="sublist-3-arrow">arrow_drop_down</i></button>
+                        <ul id="sublist-3" hidden>
+                            <li><a href="#EX-one"  class="menu-item"> 1.An Example that shows how to declare String</a></li>
+                            <li><a href="#Ex-two"  class="menu-item">2.Java program to Compare two strings</a></li>
+                            <li><a href="#Ex-three"  class="menu-item">3.Program to convert set of String to set of Integer in Java</a></li>
+                            <li><a href="#Ex-four"  class="menu-item">4.Java code to illustrate methods of AbstractSet</a></li>
+                            <li><a href="#Ex-five"  class="menu-item">5.Extract all integers from the given string in Java</a></li>
+                        </ul>
+                </div>
+        </nav>
+        <main>
+            <header>
+                <h2>String In Java</h2>
+            </header>
+            <article id="String-defination" class="active-article">
+                <h4><b>String</b></h4>
+                <p>• Once a String Object has been created, you cannot change the
+                     characters that comprise that string, i.e. String is Immutable</p>
+                </br>
+            </br>
+                <p>• To solve this, Java provides a companion class to String called StringBuffer</p>
+            </br>
+        </br>
+                 <p> • StringBuffer objects can be modiﬁed after they are create</p>
+
+            </article>
+            <article  id="html-overview-article"> 
+                <h2>String Constructor</h2>
+                <p><b>• Creating an empty String:</b></br>
+                • String s = new String();</p></br>
+            
+                <p><b>• Creating a string that has initial values:</b>
+                     </br>
+                • String(char chars[]) 
+            </br>
+                • char chars[] = {’a’, ’b’, ’c’}; 
+            </br>
+                String s = new String(chars);</p>
+        </br>
+            <p><b>• Constructing a String object that contains the same character sequence as another String object:</b> </br>
+                • String(String obj) </br>
+                • char c[] = {’J’, ’a’, ’v’, ’a’}; </br>
+                String s1 = new String(c); </br>
+                String s2 = new String(s1);</br>
+                </p></br>
+            </article>
+                 <article id="String-operations">
+                    <h2>String Operations</h2>
+                    <p><b>• String Literals:</b></br>
+                         • For each String literal,
+                         Java automatically constructs a String object</br>
+                        char chars[] = {’a’,’b’,’c’};</br>
+                         String s1 = new String(chars);</br>
+                          • Using String literals </br>
+                        String s2 = äbc";</br>
+                        </p></br>
+                    </br>
+                    <p>
+                        <b>• String Concatenation:</b>> </br>
+                        • String age = "19"; </br>
+                        String s = "He is "+ age + "years old.";</br>
+                        </p>
+                </article>
+                <article id="String-Methods">
+                    <h2>String Methods</h2>
+                    <p>String s = "Welcome to demo program"; 
+
+                    </br>
+                        <b>• length()</b></br>
+                        • int len = s.length();</br>
+                    </br>
+                        <b>• charAt(n):</b>
+                     </br>
+                            • String fruit = "banana";</br>
+                             char ch = fruit.charAt(1); </br>
+                            System.out.println(ch);</br>
+                        </br>
+                       <b> • getChars(n1, n2, s, n3):</b></br>
+                         • int start = 4, </br>
+                        end = 8, destoffset; </br>
+                        char buf[] = new char[end - start];</br>
+                         s.getChars(start,end, buf, destoffset);</br>
+                        </br>
+                        <b> • equals(s):</b>
+                        </br>
+                         • Returns true if the strings contain the same characters;</br>
+                         otherwise false</br>
+                        </br>
+                        <b>• compareTo():</b></br>
+                             • Returns the difference between the ﬁrst characters in the strings that differ</br>
+                        </br>
+                        <b>• indexOf(c):</b> 
+                        </br>• searches the ﬁrst occurrence of a character
+                        </br> • String fruit = "banana";</br>
+                         int index = fruit.indexOf(’a’);</br>
+                        </br>
+                        <b>• lastIndexOf(c):</b> </br>
+                        • searches the last occurrence of a character</br>
+                         • int index = fruit.lastIndexOf(’a’);</br>
+                    </br>
+                        <b>• indexOf(c, n):</b></br> 
+                        • used to specify a starting point for the search</br>
+                         • String fruit = "banana"; </br>
+                         int index = fruit.indexOf(’a’, 2);</br>
+                        </br>
+                        <b> • lastIndexOf(c, n):</b></br>
+                    
+                        V • used to specify a starting point for the search
+                        </br> • int index = fruit.lastIndexOf(’a’,2); </br>
+                    </br>
+                        <b>• substring():</b>
+                     </br> • Extracts a sub string </br>
+                     • String org = "Welcome to Java";
+                     
+                    </br>String result = null;</br>
+                     result = org.substring(2, 6);</br>
+                    </br>
+                      <b>• concat():</b>
+                    </br> • String s1 =Ram"; </br>
+                    String s2 = s1.concat("Hari");</br>
+                     or String s2 = s1 + "Hari";</br>
+                    </br>
+                    <b>• replace():</b></br>
+                     • Replaces all occurrences of one character in the invoking string with another character 
+                    </br>• String s = "Hello".replace(’l’,’w’); </br>
+                </br><b>• trim():</b></br>
+                      • Returns a copy of the involving string from which any leading and trailing whitespace has been removed </br>
+                      • String s = "Hello world ".trim(); </br>
+                    </br><b> • toUpperCase(): </b>
+                     </br>• String s = "Welcome to test."; </br>
+                        String upper = s.toUpperCase();</br>
+                    </br><b>• toLowerCase():</b>
+                    </br> • String lower = s.toLowerCase();</br>
+                     <b>Non-alphabetical characters, such as digits are unaffected</b>
+                        </p></br>
+                        </br>
+                </article>
+                <article id="String-Conversion-and-toString()">
+                    <h2>String Conversion and toString()</h2>
+                    <p>• If you want to represent any object as a string, toString() is used. This method returns the string representation of the object </p>
+                    <p>• If you print any object, java compiler internally invokes toString() method on the object. Overriding toString() method returns the desired output</p>
+                    <p>• By overriding the toString() method of the Object class, we can return values of the object, so we don’t need to write much code Every class implements toString() because it is deﬁned by Object</p>
+                    <p>• public String toString()</br>
+                        { </br>
+                            return "Dimensions: "+ height + ", "+ width; 
+                    </br>}</p>
+                </article>
+                <article id="Data-Conversion">
+                    <h2>Data Conversion using valueOf()</h2>
+                    <p>• It converts different types of values into string. It is a static method that is overloaded within String for all built-in types </p>
+                    <p>• public static String valueOf(boolean b)</br>
+                         public static String valueOf(char c) </br>
+                         public static String valueOf(int i)
+                        </br> public static String valueOf(double d)
+                    </br>
+                    </p>
+                    <p>• int data=30;</br>
+                         String str=String.valueOf(data);</br>
+                          System.out.println(str+40);</br>
+                        </p>
+                </article>
+                <article>
+                    <h2>StringBuffer</h2>
+                    <p>• StringBuffer is a peer class of String that provides much of the functionality of Strings</p></br>
+                    <p>• String is immutable. StringBuffer is mutable. It represents growable and writable character sequence</p></br>
+                    <p>• StringBuffer may have characters and substring inserted in the middle or appended to the end</p></br>
+                    <p>• It will automatically grow to make room for such additions</p></br>
+                </article>
+                <article id="StringBuffer-Constructor">
+                    <h2>StringBuffer Constructor</h2>
+                    <p><b>• Creating an empty StringBuffer</b></br>
+                         • StringBuffer sb = new StringBuffer();</p>
+                         <p><b>• Creating size-deﬁned StringBuffer</b></br>
+                            • StringBuffer sb = new StringBuffer(int size);</br>
+                               StringBuffer sb = new StringBuffer(50);</br>
+                        </p>
+                        <p><b>• Creating String object - based StringBuffer</b><br>
+                             • StringBuffer sb = new StringBuffer(String str); </br>
+                             StringBuffer sb = new StringBuffer("Hello");</p>
+                </article>
+                <article id="StringBuffer-Functions">
+                    <h2>StringBuffer Methods</h2>
+                    <p><b>• length()</b></br>
+                         • ﬁnds the current length </br>
+                         • StringBuffer sb=new StringBuffer("Hello");
+                        </br> int len=sb.length();</p>
+                        <p><b>• capacity() </b></br>
+                            • ﬁnds the total allocated capacity</br>
+                             • StringBuffer sb=new StringBuffer("Hello");</br>
+                              int cap=sb.capacity();
+                        </p>
+                        <p><b>• ensureCapacity()</b></br> 
+                            • sets the size of the buffer after a StringBuffer has been constructed </br>
+                            • void ensureCapacity(int capacity)</br>
+                            • capacity speciﬁes the minimum size of the buffer</br>
+                            </p>
+                            <p><b>• setLength()</b></br> 
+                                • sets the length of the buffer within a StringBuffer object</br>
+                                • void setLength(int len) </br>
+                                • len speciﬁes the length of the buffer</br>
+                                • sb.setLength(4);</br>
+                                 </p>
+                            <p><b>• charAt()</b></br> 
+                                • obtains the value of a single character</br> 
+                                • char charAt(int pos) </br>
+                                • pos speciﬁes the index of the character being obtained </br>
+                                • StringBuffer sb=new StringBuffer("Hello"); </br>
+                                 System.out.println(Character: "+sb.charAt(2));</br>
+                            </p>
+                            <p><b>• setCharAt()</b></br>
+                                 • sets the value of a character</br> 
+                                  • void setCharAt(int pos, char ch) </br> 
+                                  • pos speciﬁes the index of the character being obtained</br> 
+                                   • StringBuffer sb=new StringBuffer("Hello"); </br> 
+                                   sb.setCharAt(2,’i’);
+                                </br> </p>
+                            <p><b>• getChars()</b></br>
+                                 • copies a substring of a StringBuffer into an array</br>
+                                  • void getChars (int begin, int end, char[] target, int targetbeg)</br>
+                                </p>
+                            <p><b>• append()</b></br>
+                                • concatenates the string representation of any type of data to the end of the invoking StringBuffer object</br>
+                                • StringBuffer append(Object ob)</br>
+                                    StringBuffer append(String str)</br>
+                                    StringBuffer append(int num)</br>
+                                • String.valueOf() is called for each parameter to obtain its string representation</br>
+                                • String s=null;</br>
+                                     int a=100; </br>
+                                     StringBuffer sb=new StringBuffer (40);</br>
+                                     s=sb.append(ä=").append(a).append("!").toString();</br>
+                                    </p>
+                                <p><b>• insert()</b></br>
+                                    • inserts one string into another</br>
+                                    • StringBuffer insert(int index, String str) </br> 
+                                       StringBuffer insert(int index, char ch)</br> 
+                                        StringBuffer insert(int index, Object ob) </br> 
+                                    • index speciﬁes the index at which the string will be inserted</br> 
+                                    • StringBuffer sb=new StringBuffer("Hello "); </br> 
+                                         sb.insert(7,ök");
+                                </p>
+                                <p><b>• reverse()</b></br>
+                                    • reverses the characters in a StringBuffer object</br>
+                                    • StringBuffer reverse()</br>
+                                    • StringBuffer sb=new StringBuffer("Hello");</br>
+                                        sb.reverse();</p>
+                                <p><b>• delete()</b></br> 
+                                    • deletes a sequence of characters </br> 
+                                    • StringBuffer delete(int start, int end)</br> 
+                                     • sb.delete(2,4);
+                                 </p>
+                                 <p><b>• deleteCharAt()</b></br>
+                                     • deletes the character at the pos index </br>
+                                     • StringBuffer deleteCharAt(int pos)</br>
+                                      • sb.deleteCharAt(0);
+                                    </p>
+                                    <p>
+                                        <b>• replace()</b></br>
+                                        • replaces one set of characters with another set</br>
+                                         • StringBuffer replace(int start, int end, String str) </br>
+                                         • StringBuffer sb=new StringBuffer("Bhubaneswar");</br>
+                                          sb.replace(3,4,"va");
+
+                                    </p>
+                </article>
+                <article id="EX-one">
+                    <h2>An Example that shows how to declare String</h2>
+                    <p>/
+
+                        import java.io.*; </br>
+                        import java.lang.*; </br>
+                        
+                        class Test { </br>
+                            public static void main(String[] args) </br>
+                            { </br>
+                              
+                                String s = "GeeksforGeeks"; </br>
+                        
+                                
+                                System.out.println("String s = " + s); </br>
+                        
+                            
+                                String s1 = new String("GeeksforGeeks"); </br>
+                        
+                            
+                                System.out.println("String s1 = " + s1); </br>
+                            } </br>
+                        } </br>
+                        <p>
+                </article>
+                <article id="Ex-two">
+                    <h2>Java program to Compare two strings </h2>
+                    <p>
+                    
+                        public class GFG { </br>
+                        </br>
+                           
+                            public static int stringCompare(String str1, String str2) </br>
+                            { </br>
+                            </br>
+                                int l1 = str1.length(); </br>
+                                int l2 = str2.length(); </br>
+                                int lmin = Math.min(l1, l2); </br>
+                            </br>
+                                for (int i = 0; i < lmin; i++) { </br>
+                                    int str1_ch = (int)str1.charAt(i); </br>
+                                    int str2_ch = (int)str2.charAt(i); </br>
+                                </br>
+                                    if (str1_ch != str2_ch) { </br>
+                                        return str1_ch - str2_ch; </br>
+                                    } </br>
+                                } </br>
+                            </br>
+                             
+                                if (l1 != l2) { </br>
+                                    return l1 - l2; </br>
+                                } </br>
+                            </br>
+                             
+                                else { </br>
+                                    return 0; </br>
+                                } </br>
+                            } </br>
+                        
+                           
+                            public static void main(String args[]) </br>
+                            { </br>
+                                String string1 = new String("Geeksforgeeks"); </br>
+                                String string2 = new String("Practice"); </br>
+                                String string3 = new String("Geeks"); </br>
+                                String string4 = new String("Geeks"); </br>
+                            </br>
+                               
+                                System.out.println("Comparing " + string1 + " and " + string2 </br>
+                                                + " : " + stringCompare(string1, string2)); </br>
+                                            </br>
+                           
+                                System.out.println("Comparing " + string3 + " and " + string4 </br>
+                                                + " : " + stringCompare(string3, string4)); </br>
+                                            </br>
+                               
+                                System.out.println("Comparing " + string1 + " and " + string4</br>
+                                                + " : " + stringCompare(string1, string4)); </br>
+                            } </br>
+                        } </br>
+                        </p>
+                </article>
+                <article id="Ex-three">
+                    <h2>Program to convert set of String to set of Integer in Java</h2>
+                    <p>
+                        
+                        import java.util.*; </br>
+                        import java.util.stream.*; </br>
+                    </br>
+                        class GFG { </br>
+                        </br>
+                            public static void main(String args[]) </br>
+                            { </br>
+                            </br>
+                                Set<String> setOfString = new HashSet<>( </br>
+                                    Arrays.asList("1", "2", "3", "4", "5")); </br>
+                                </br>
+                                
+                                System.out.println("Set of String: " + setOfString); </br>
+                        
+                            </br>
+                                Set<Integer> setOfInteger = setOfString.stream() </br>
+                                                                .map(s -> Integer.parseInt(s)) </br>
+                                                                .collect(Collectors.toSet()); </br>
+                        
+                                                            </br>
+                                System.out.println("Set of Integer: " + setOfInteger); </br>
+                            } </br>
+                        } </br>
+                        </p>
+                </article>
+                <article id="Ex-four">
+                    <h2>Java code to illustrate methods of AbstractSet</h2>
+                    <p> 
+                        
+                        import java.util.*; </br>
+                    </br>
+                        public class GFG1 { </br>
+                            public static void main(String[] args) throws Exception </br>
+                            { </br>
+                            </br>
+                                try { </br>
+                                </br>
+                                    
+                                    AbstractSet<Integer> </br>
+                                        abs_set = new TreeSet<Integer>(); </br>
+                        
+                                        </br>
+                                    abs_set.add(1); </br>
+                                    abs_set.add(2); </br>
+                                    abs_set.add(3); </br>
+                                    abs_set.add(4); </br>
+                                    abs_set.add(5); </br>
+                        
+                                </br>
+                                    System.out.println("AbstractSet before "</br>
+                                                    + "removeAll() operation : "</br>
+                                                    + abs_set); </br>
+                        
+                                   
+                                    Collection<Integer> </br>
+                                        arrlist2 = new ArrayList<Integer>(); </br>
+                                    arrlist2.add(1); </br>
+                                    arrlist2.add(2); </br>
+                                    arrlist2.add(3); </br>
+                        
+                                </br>
+                                    System.out.println("Collection Elements"</br>
+                                                    + " to be removed : "</br>
+                                                    + arrlist2); </br>
+                        
+                                    abs_set.removeAll(arrlist2); </br>
+                        
+                                </br>
+                                    System.out.println("AbstractSet after "</br>
+                                                    + "removeAll() operation : "</br>
+                                                    + abs_set); </br>
+                                } </br>
+                        
+                                catch (NullPointerException e) { </br>
+                                    System.out.println("Exception thrown : " + e); </br>
+                                } </br>
+                            } </br>
+                        } </br>
+                        </p>
+                </article>
+                <article id="Ex-five">
+                    <h2>Extract all integers from the given string in Java</h2>
+                    <p>
+                    </br>
+                public class GFG { </br>
+                </br>
+            </br>
+                    static String extractInt(String str) </br>
+                    { </br>
+                    </br>
+                        str = str.replaceAll("[^\\d]", " "); </br>
+
+                    </br>
+                        str = str.trim(); </br>
+
+                    </br>
+                        str = str.replaceAll(" +", " "); </br>
+                    </br>
+                        if (str.equals("")) </br>
+                            return "-1"; </br>
+                        </br>
+                        return str;</br> 
+                    } </br>
+
+                </br>
+                    public static void main(String[] args) </br>
+                    { </br>
+                        String str = "avbkjd1122klj4 543 af";</br> 
+                        System.out.print(extractInt(str)); </br>
+                    } </br>
+                } </br>
+            </br>
+                    </p>
+                </article>
+               
+                <h2 > Submitted By:<h2>
+                <h3>Puneet(1806143)</h3>
+                <h3>Pushkar Prabhat (1806144)</h3>
+                <h3>Raja (1806146)</h3>
+                <h3>Ritesh (1806148)</h3>
+                <h1 >THANKS</h1>
+               
+                
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
